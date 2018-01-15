@@ -1,0 +1,84 @@
+snippet fan "A fancy header" b
+\documentclass[a4paper]\{article\}
+\usepackage[margin=.8in]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr, multicol}
+\usepackage{float}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\fancyhead[L]{\LARGE{Kevin Shu}}
+\fancyhead[C] {\LARGE{$1}}
+\fancyhead[R]{\LARGE{$2}}
+
+\author{Kevin Shu}
+\title{$1}
+
+%Set up fancy headers.
+\pagestyle{fancy}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage[parfill]{parskip}
+
+%Define theorem formatting
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3's }#1}
+\theoremstyle{named}
+\newtheorem*{namedtheorem}{Theorem}
+
+%Make sections actually useful
+\let\tempa\section
+\renewcommand{\section}[1]{\tempa*{#1}}
+\let\tempb\subsection
+\renewcommand{\subsection}[1]{\tempb*{#1}}
+\let\tempc\subsubsection
+\renewcommand{\subsubsection}[1]{\tempc*{#1}}
+\newcommand{\answer}[1]{{\subsubsection{Answer: #1}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\textbf{P}}
+\newcommand{\SPACE}{\textbf{SPACE}}
+\newcommand{\NP}{\textbf{NP}}
+\newcommand{\SAT}{\textbf{SAT}}
+\newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\st}{{\text{ s.t. }}}
+
+\begin{document}
+\maketitle
+\newpage
+$3
+\end{document}
+endsnippet
+
+#snippet sec "A LaTeX section" b
+#%Beginning of section $1
+#\section*{$1}
+#$2
+#%End of section $1
+#endsnippet
+#
+#snippet beg "Begin something" 
+#\begin{$1}
+#$2
+#\end{$1}
+#endsnippet
+#
+#snippet bib "Bibliography"
+#endsnippet
+
+snippet _ "Subscript"
+_{$1}
+endsnippet
+
+snippet / "Fraction"
+\frac{${1:1}}{$2}
+endsnippet
+
+snippet al "Align"
+\begin{align}
+$1
+\end{align}
+endsnippet

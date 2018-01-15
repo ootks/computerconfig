@@ -1,0 +1,31 @@
+<+	+> !comp! !exe!
+\documentclass[a4paper]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{fancyhdr, multicol}
+\fancyhead[L]{\LARGE{Kevin Shu}}
+\fancyhead[C] {\LARGE{<++>}}
+\fancyhead[R]{\LARGE{<++>}}
+
+\author{Kevin Shu}
+\title{<++>}
+
+\pagestyle{fancy}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{indentfirst}
+
+\let\temp\section
+\renewcommand{\section}[1]{\temp*{#1}}
+\let\temp\subsection
+\renewcommand{\subsection}[1]{\temp*{#1}}
+\let\temp\subsubsection
+\renewcommand{\subsubsection}[1]{\temp*{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
+
+\begin{document}
+\maketitle
+\newpage
+<++>
+\end{document}
